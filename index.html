@@ -17,7 +17,12 @@
   <!-- Header Section -->
   <div class="header">
     <div class="logo">Passkey Images Locker</div>
-    <nav class="nav">
+
+    <!-- Hamburger button (only shows on mobile via CSS) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation menu -->
+    <nav class="nav" id="navMenu">
       <a href="#">Home</a>
       <a href="#">Features</a>
       <a href="#">About</a>
@@ -56,15 +61,21 @@
   </section>
 
   <!-- Footer Section -->
-<div class="footer">
-  <p>
-    Concept & Design: 
-    <a href="https://www.instagram.com/sntx_aixk/?utm_source=ig_web_button_share_sheet" target="_blank" class="creator-link">Aishik</a>
-  </p>
-  <p>© 2025 Passkey Images Locker. All Rights Reserved.</p>
-  <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-</div>
+  <div class="footer">
+    <p>
+      Concept & Design: 
+      <a href="https://www.instagram.com/sntx_aixk/?utm_source=ig_web_button_share_sheet" target="_blank" class="creator-link">Aishik</a>
+    </p>
+    <p>© 2025 Passkey Images Locker. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </div>
 
+  <!-- ✅ JavaScript at the end -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>

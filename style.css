@@ -35,7 +35,7 @@ p {
   padding: 20px;
 }
 
-/* Header Section */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@ p {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -58,7 +58,7 @@ p {
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -66,18 +66,13 @@ p {
   color: #18BC9C;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   background-color: #34495E;
   color: white;
   padding: 80px 20px;
   text-align: center;
   border-radius: 8px;
-}
-
-.hero h1,
-.hero p {
-  color: white; /* Makes both h1 and p inside hero white */
 }
 
 .hero h1 {
@@ -105,7 +100,7 @@ p {
   background-color: #16A085;
 }
 
-/* Features Section */
+/* Features */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -151,6 +146,129 @@ p {
   text-align: center;
 }
 
+.footer a {
+  color: #18BC9C;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+.hero h1,
+.hero p {
+  color: white; /* Makes both h1 and p inside hero white */
+}
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+
+  .feature-card {
+    padding: 15px;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show ☰ on mobile */
+  }
+
+  .nav {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    background-color: #2C3E50;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav.show {
+    display: flex; /* Show menu when ☰ is clicked */
+  }
+}
+
+/* Default nav for large screens */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #111;  /* dark background like hero */
+    position: absolute;
+    top: 60px; /* below header */
+    right: 0;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 /* Creator Link in Footer */
 .footer .creator-link {
   color: #18BC9C; /* teal color */
@@ -167,23 +285,63 @@ p {
   background-color: #18BC9C;
   color: white;
 }
+/* Footer */
+.footer {
+  background-color: #2C3E50;
+  color: white; /* general fallback */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  color: white; /* ensures paragraphs are white */
+}
 
 .footer a {
   color: #18BC9C;
   text-decoration: none;
 }
 
-.footer p {
-  color: white; /* Makes footer paragraph text white */
-}
-
 .footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
+/* Hero Section */
+.hero {
+  background-color: #34495E;
+  color: white; /* fallback for other text */
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 8px;
 }
+
+.hero h1,
+.hero p {
+  color: white; /* ensures h1 and p are white */
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  background-color: #18BC9C;
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #16A085;
+}
+
