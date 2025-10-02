@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #5d5d5d;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2C3E50;
+  color: white;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #18BC9C;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #34495E;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.hero h1,
+.hero p {
+  color: white; /* Makes both h1 and p inside hero white */
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  background-color: #18BC9C;
+  border: none;
+  padding: 15px 40px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #16A085;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Footer */
+.footer {
+  background-color: #2C3E50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Creator Link in Footer */
+.footer .creator-link {
+  color: #18BC9C; /* teal color */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 10px;
+  border: 1px solid #18BC9C;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer .creator-link:hover {
+  background-color: #18BC9C;
+  color: white;
+}
+
+.footer a {
+  color: #18BC9C;
+  text-decoration: none;
+}
+
+.footer p {
+  color: white; /* Makes footer paragraph text white */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
